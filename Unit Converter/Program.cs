@@ -4,7 +4,10 @@
 bool keepGoing = true;
 int selectedAction = 0;
 
+//Setup class references
 Length length = new Length();
+Temperature temp = new Temperature();
+Weight weight = new Weight();
 
 Console.WriteLine("Welcome to the Unit Converter!");
 Console.WriteLine("\nWhat do you need converting?");
@@ -21,9 +24,11 @@ while(keepGoing)
             break;
 
         case 2:
+            temp.GetTemp();
             break;
 
         case 3:
+            weight.getWeight();
             break;
 
         case 4:

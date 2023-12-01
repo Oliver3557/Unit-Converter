@@ -31,8 +31,6 @@ namespace Unit_Converter
         }
         private void ConvertLength(int inputUnit)
         {
-            
-
             switch (inputUnit)
             {
                 case 1:
@@ -79,8 +77,8 @@ namespace Unit_Converter
                     cm = (float)(yard * 91.44);
                     inch = (float)(yard * 36);
                     foot = (float)(yard * 3);
-                    mile = (float)(yard * 1760);
-                    km = (float)(yard * 1094);
+                    mile = (float)(yard / 1760);
+                    km = (float)(yard / 1094);
                     break;
                 case 6:
                     mile = value;
@@ -99,6 +97,10 @@ namespace Unit_Converter
                     foot = (float)(km * 3280.84);
                     yard = (float)(km * 1093.61);
                     mile = (float)(km / 1.609);
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid Input");
                     break;
             }
 
